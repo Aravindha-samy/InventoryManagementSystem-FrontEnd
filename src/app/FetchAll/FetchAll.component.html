@@ -1,0 +1,66 @@
+<h1 class="combine-colour">My Products List</h1>
+<p>
+    <!-- <a (click)="createNew()">Create New</a> -->
+</p>
+
+    
+
+
+<div class="input-wrapper">
+    <input type="text" class="search" name="productName" placeholder="filter by name..."  (keyup)="ProductSearch($event)">
+    <i class="bi bi-search"></i>
+  </div>
+  <div class="input-wrapper">
+    <input type="text" class="search" name="productCategory" placeholder="filter by category..." (keyup)="CategorySearch($event)">
+    <i class="bi bi-search"></i>
+  </div>
+
+
+<br>
+<br>
+
+
+<div *ngIf="productDetails.length>0;else noProducts">
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Quantity</th>
+                <th>Product Cost</th>
+                <th>Product Barcode</th>
+                <th>Product Category</th>
+                <th>Supplier ID</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngIf="productDetails">
+             <tr  *ngFor="let product of productDetails">
+                <!-- <th>Product Id</th>
+                <td>{{product.productId}}</td> -->
+                <td>{{ product.productName }}</td>
+                <td>{{ product.productDescribtion }}</td>
+                <td>{{ product.productQuantity }}</td>
+                <td>{{ product.productCost| currency:'INR':'symbol':'1.0-2' }}</td>
+                <td>{{ product.productBarCode }}</td>
+                <td>{{ product.productCategory }}</td>
+                <td>{{ product.supplierId }}</td>
+                <td>
+                    <a class="edit-button" [routerLink]="['/edit',product.productId]">Edit</a>
+                    <a class="detail-button" [routerLink]="['/details',product.productId]">Details</a>
+                    <a class="delete-button" [routerLink]="['/delete',product.productId]">Delete</a>
+
+                   <!-- <button (click)="editProduct(product.ProductId)" class="edit-button">Edit</button> -->
+                    <!--<button (click)="viewDetails(product.ProductId)" ></button>
+                    <button (click)="deleteProduct(product.ProductId)" class="-button"></button> -->
+                </td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+<ng-template #noProducts>
+    <p>No Product is Available</p>
+</ng-template>
+</div>

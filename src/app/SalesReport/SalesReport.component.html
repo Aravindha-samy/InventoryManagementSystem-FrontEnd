@@ -1,0 +1,45 @@
+<div>
+  <h1  class="combine-colour" style="text-align:center">Sales Report</h1>
+ 
+</div>
+<div class="button-container">
+  <button (click)="downloadExcel()" class="download-button">Download Excel</button>
+</div><br>
+
+
+<div class="table-responsive">
+  <table class="table" *ngIf="productDetails">
+    <thead> 
+      <tr>
+        <!-- <th>Product Id</th> -->
+        <th>Product Name</th>
+        <th>Product Category</th>
+        <th>Product Quantity</th>
+        <th>Customer Id</th>
+        <th>Sales Id</th>
+        <th>Quantity Sold</th>
+        <th>Sales Month</th>
+        <th>Sales Amount (₹)</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of productDetails" >
+      <tr >
+      
+        <!-- <td>{{ item.productId }}</td> -->
+        <td>{{ item.productName }}</td>
+        <td>{{ item.productCategory }}</td>
+        <td>{{ item.productQuantity }}</td>
+        
+        <!-- Accessing sales properties using safe navigation operator -->
+        <td>{{ item.sales?.$values[0]?.customerId }}</td>
+        <td>{{ item.sales?.$values[0]?.salesId }}</td>
+        <td>{{ item.sales?.$values[0]?.quantitySold }}</td>
+        <td>{{ item.sales?.$values[0]?.salesDate |date:'MMMM yyyy' }}</td>
+        <td>{{ item.sales?.$values[0]?.profit | currency:'INR':'symbol':'1.0-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!productDetails || productDetails.length === 0" style="text-align: center; padding: 20px;">
+    <p>The searched product is not found.</p>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.delete-button {
+    display: inline-block;
+    padding: 4px 8px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+    background-color: #dc3545; /* Red color, you can change this to fit your design */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+   
+}
+
+    .delete-button:hover {
+        background-color: #c82333;
+        color: #fff ;/* Darker red color on hover */
+    }
+.detail-button {
+    display: inline-block;
+    padding: 4px 8px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+    background-color: #28a745; /* Red color, you can change this to fit your design */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+
+    .detail-button:hover {
+        color: #fff; background-color: #218838; /* Darker red color on hover */
+    }
+.edit-button {
+    display: inline-block;
+    padding: 4px 8px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+    background-color: #007bff; /* Red color, you can change this to fit your design */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+
+    .edit-button:hover {
+        background-color: #0056b3;
+        color: #fff ; 
+    }
+    
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+      
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: left;
+        }

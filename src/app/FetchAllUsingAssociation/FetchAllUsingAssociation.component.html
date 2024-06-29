@@ -1,0 +1,66 @@
+<div>
+  <h1  class="combine-colour" style="text-align:center">Fetch Products Using Association</h1>
+  <div class="form-container">    
+    <form (ngSubmit)="onSubmit(productForm)" #productForm="ngForm" class="my-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <input type="text" id="productName" class="form-control" name="productName" placeholder="Enter Product Name" ngModel required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="number" id="quantitySold" class="form-control" name="quantitySold" placeholder="Enter the Quantity Sold" ngModel required>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="input-container ">
+        <input type="text" class="right-text" placeholder="search by filter...">  <!--.target.value.charAt(0)) -->
+          </form>
+    
+  </div>
+</div>
+
+<!-- <input type="text" [(ngModel)]="searchKey">
+<select [(ngModel)]="columnToSearch">
+  <option value="productId">ID</option>
+  <option value="productName">Name</option>
+  <option value="productCategory">Age</option>
+</select>
+<button (click)="search()">Search</button> -->
+
+<div class="table-responsive">
+  <table class="table" *ngIf="productDetails && productDetails.length > 0">
+    <thead> 
+      <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Category</th>
+        <th>Product Quantity</th>
+        <th>Customer Id</th>
+        <th>Sales Id</th>
+        <th>Quantity Sold</th>
+        <th>Sales Date</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="productDetails">
+      <tr  *ngFor="let item of productDetails">
+        <td>{{ item.productId }}</td>
+        <td>{{ item.productName }}</td>
+        <td>{{ item.productCategory }}</td>
+        <td>{{ item.productQuantity }}</td>
+       
+        <td>{{item.sales.$values[0].customerId}}</td>
+        <td>{{item.sales.$values[0].salesId}}</td>
+       
+        <td>{{item.sales.$values[0].quantitySold}}</td>
+        <td>{{item.sales.$values[0].salesDate | date: 'dd-MM-yyyy'}}</td>
+       
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!productDetails || productDetails.length === 0" style="text-align: center; padding: 20px;">
+    <p>The searched product is not found.</p>
+  </div>
+</div>

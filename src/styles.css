@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+ background-image: url(./assets/create.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  
+}
+#response {
+    
+  padding: 10px; /* add some padding */
+ 
+ font-size:24px;
+  color:teal;
+}
+#response{
+  font-weight:bold;
+}
+h1 {
+  text-align: center;
+}
+
+/* Style for "Create New" link */
+p a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+  p a:hover {
+      background-color: #0056b3;
+  }
+ 
+  .text-danger {
+    color: red; 
+    font-style:unset;  
+    font-family: Arial, sans-serif;
+    
+  }
+  .form-control{
+    background-color: transparent;
+  }
+
+
+/* .combine-colour {
+
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px;
+  color: #003366; 
+  background: linear-gradient(to right, #003366, #003366); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease; 
+  cursor: pointer;
+  
+ 
+  
+} */

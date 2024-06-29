@@ -1,0 +1,39 @@
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-container">
+          <h2 >Login</h2>
+           <br>
+                <form (ngSubmit)="login(userForm)" #userForm="ngForm" >
+
+                <div class="mb-3">
+                    <input type="text" class="form-control w-100"  name="Username" placeholder="Enter username" ngModel required>
+                    <span class="text-danger" *ngIf="userForm.controls['Username'].invalid && userForm.controls['Username'].touched">
+                      Username Required
+                  </span>                  
+                </div><br>
+                <div class="mb-3 password-toggle">
+                  <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" name="passwordHash" placeholder="Password" ngModel required>
+                  
+                      <i class="bi {{eye}}" type="button" (click)="togglePasswordVisibility() " aria-label="Toggle password visibility"></i>
+                  
+                              
+              </div> 
+              <div><span class="text-danger" *ngIf="userForm.controls['passwordHash'].invalid && userForm.controls['passwordHash'].touched">
+                Password Required
+            </span> </div>
+              <br>
+                <button type="submit" class="btn btn-primary w-100" [disabled]="!userForm.valid">Login</button>
+                <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+            </form><br>
+            <div>
+
+            <p class="">Don't have an account? <a class="detail-button" [routerLink]="['/signup']"  id="register-link">Register</a></p></div>
+        </div>
+    </div>
+  </div>
+</div>
+

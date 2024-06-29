@@ -1,0 +1,112 @@
+<main><div class="container">
+    <h1 class="combine-colour">Edit</h1>
+
+    <h4>Product</h4>
+    <hr />
+    <div id="response">
+        {{responseMessage}}
+    </div>
+    
+    <form (ngSubmit)="onSubmit(productId)" #productId="ngForm" class="d-flex justify-content-center align-items-center">
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <input type="number" id="ProductId" name="id" class="form-control" placeholder="Enter Product ID" ngModel required>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-info">Details</button>
+          </div>
+    </div>
+    </form>
+    
+    <div class="row" *ngIf="productDetails">
+        <div class="col-md-8 offset-md-2">
+            <form (submit)="onUpdate(productForm)"  #productForm="ngForm" class="custom-form">
+                                              
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                             <label for="ProductId" class="control-label">Product ID</label>
+                             <input type="number" class="form-control" [(ngModel)]="productDetails.productId" name="productId" readonly />
+                             <span class="text-danger"></span> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ProductName" class="control-label">Product Name</label>
+                            <input type="text" id="ProductName" name="productName" class="form-control" [(ngModel)]="productDetails.productName" required />
+                            <span class="text-danger" *ngIf="productForm.controls['productName'].invalid && productForm.controls['productName'].touched">
+                                Product Name is required.
+                            </span>
+                        </div>
+                    <div class="form-group">
+                        <label for="ProductDescribtion" class="control-label">Product Description</label>
+                        <input type="text" id="ProductDescribtion" name="productDescribtion" class="form-control" [(ngModel)]="productDetails.productDescribtion" required/>
+                        <span class="text-danger" *ngIf="productForm.controls['productDescribtion'].invalid && productForm.controls['productDescribtion'].touched">
+                            Product Description is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ProductQuantity" class="control-label">Product Quantity</label>
+                        <input type="number" id="ProductQuantity" name="productQuantity" class="form-control" [(ngModel)]="productDetails.productQuantity" required/>
+                        <span class="text-danger" *ngIf="productForm.controls['productQuantity'].invalid && productForm.controls['productQuantity'].touched">
+                            Product Quantity is required.
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="ProductCost" class="control-label">Product Cost</label>
+                        <input type="number" id="ProductCost" name="productCost" class="form-control" [(ngModel)]="productDetails.productCost" required />
+                        <span class="text-danger" *ngIf="productForm.controls['productCost'].invalid && productForm.controls['productCost'].touched">
+                            Product Cost is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ProductCategory" class="control-label">Product Category</label>
+                        <input type="text" id="ProductCategory" name="productCategory" class="form-control" [(ngModel)]="productDetails.productCategory" required />
+                        <span class="text-danger" *ngIf="productForm.controls['productCategory'].invalid && productForm.controls['productCategory'].touched ">
+                            Product Category is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="SupplierId" class="control-label">Supplier ID</label>
+                        <input type="number" id="SupplierId" name="supplierId" class="form-control" [(ngModel)]="productDetails.supplierId" required>
+                        <span class="text-danger" *ngIf="productForm.controls['supplierId'].invalid && productForm.controls['supplierId'].touched">
+                            Supplier ID is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ProductBarCode" class="control-label">Product Barcode</label>
+                        <input type="string" id="ProductBarCode" name="productBarCode" pattern="^\d{15}$" class="form-control" [(ngModel)]="productDetails.productBarCode" (blur)="checkBarcodeUniqueness(productForm)" required           />
+                        <span class="text-danger" *ngIf="!barcodeNotUnique && productForm.controls['productBarCode'].touched && productForm.controls['productBarCode'].valid">
+                            Product Barcode must be unique.
+                        </span>
+                        <span class="text-danger" *ngIf="productForm.controls['productBarCode'].invalid && barcodeNotUnique && productForm.controls['productBarCode'].touched">
+                            Please enter a valid 15-digit barcode
+                        </span>
+                          
+                        <span class="text-danger" *ngIf="productForm.controls['productBarCode'].invalid && productForm.controls['productBarCode'].touched && !barcodeNotUnique">
+                            Product Barcode is required.
+                        </span>
+                    </div>
+                  
+                    
+                    </div>
+                    <!-- <a class="detail-button" [routerLink]="['/details', productDetails.productId]">Details</a>
+                    <a class="delete-button" [routerLink]="['/delete', productDetails.productId]">Delete</a> -->
+
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" [disabled]="!productForm.valid" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div>
+        <a href="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+</main>

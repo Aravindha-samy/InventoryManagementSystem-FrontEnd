@@ -1,0 +1,187 @@
+#home{
+    background-image: url("../../assets/bg.jpg") !important;
+    background-repeat: no-repeat;
+  
+    min-height: 900px; 
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;}
+   
+/*====================================*/
+ .overview {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    overflow: hidden;
+}
+
+    .overview h2 {
+        margin-top: 0;
+        color: #333; 
+        font-size: 24px; 
+        text-transform: uppercase; 
+    }
+    .overview h3{
+        overflow: hidden;
+    }
+
+/* Overview items */
+.overview-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}  
+
+.item {
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    margin-right: 5px; /* Adding space between items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Adding transform animation */
+}
+
+
+    .item:hover {
+        transform: translateY(-5px); /* Lift up on hover */
+    }
+
+/* Search input */
+.search input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Rounder input field */
+    font-size: 18px; /* Larger font size */
+    background-color: #f9f9f9;
+}
+
+/* Activity section */
+.activity ul {
+    padding: 0;
+}
+
+.activity li {
+    margin-bottom: 10px;
+    color: #555; /* Adjusting text color */
+    font-size: 16px; /* Font size adjustment */
+}
+
+/* Help section */
+.help a {
+    display: inline-block;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px; /* Slightly increased padding */
+    border-radius: 50px; /* Round button */
+    transition: background-color 0.3s ease; /* Adding smooth transition */
+}
+
+    .help a:hover {
+        background-color: #45a049; /* Darker shade on hover */
+    }
+
+
+
+.welcome {
+    text-align: center; /* Center align the text */
+    padding: 50px 0; /* Add some padding for spacing */
+    background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient background */
+    color: #fff; /* White text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+    .welcome h1 {
+        font-size: 42px; /* Larger font size */
+        margin: 0; /* Remove default margin */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 2px; /* Add letter spacing */
+        animation: glow 2s infinite alternate; /* Add glowing animation */
+    }
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #4CAF50, 0 0 30px #2196F3; /* Text shadow for glowing effect */
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #4CAF50, 0 0 40px #2196F3; /* Text shadow for glowing effect */
+    }
+}
+/* ----------------------------------------- */
+/* Global styles */
+
+
+/* Container styles */
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* Center text for large screens and left align for smaller screens */
+.text-center {
+    text-align: center;
+}
+
+.text-lg-start {
+    text-align: left;
+}
+
+/* Column styles */
+.col-lg-3 {
+    flex: 0 0 25%; /* Ensure equal width for columns */
+}
+
+/* Heading styles */
+h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* List styles */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* List item styles */
+li {
+    margin-bottom: 1rem;
+}
+
+/* Anchor styles */
+a {
+    color: #333; /* Change to desired text color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icon styles */
+.bi {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 50%; /* Two columns per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .col-lg-3 {
+        flex: 0 0 100%; /* One column per row on small screens */
+    }
+}

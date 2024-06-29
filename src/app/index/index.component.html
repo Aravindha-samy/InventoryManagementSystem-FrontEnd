@@ -1,0 +1,276 @@
+<div id="home">
+  <section>
+<div class="welcome"> 
+  <h1>Welcome to Our Inventory Management System</h1>   
+  
+</div>
+<br>
+<section class="overview">
+  <h2>Overview</h2><br>
+  <div class="overview-items">
+      <div class="item">
+      <h3>Total Product</h3>
+          <h2> {{ totalProducts }}</h2>
+      </div>
+      <div class="item">
+          <h3>Our Supliers</h3>
+          <h2>{{supplierCount}}</h2>
+      </div>
+      <div class="item">
+        <h3>Our Customers</h3>
+        <h2>{{customer}}</h2>
+    </div>
+
+    
+      
+    <div class="item">
+      <h3>Month Sales</h3>
+      <h2>{{monthprofit| currency:'INR':'symbol':'1.0-2'}}</h2>
+  </div>
+  <div class="item">
+    <h3>Year Sales</h3>
+    <h2>{{yearprofit| currency:'INR':'symbol':'1.0-2'}}</h2>
+</div>
+<div class="item">
+  <h3>Low Stocks</h3>
+  <h2>{{lowStock}}</h2>
+</div>
+  </div>
+</section>
+<section class="help">
+  <h2>Need Help?</h2>
+  <br>
+  <a >Support Resources</a>
+  <br><br><br><br><br><br>
+</section>
+</section>
+<section>
+  <section style="color: #000; background-color: #f3f2f2;">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-xl-8 text-center">
+            <h1 class="fw-bold mb-4">Customer Stories</h1>
+            <p style="font-size: larger;" class="mb-4 pb-2 mb-md-5 pb-md-0">
+              Our customer service is dedicated to ensuring your satisfaction, 
+              providing timely assistance and solutions. We strive to exceed your expectations, 
+              offering friendly and knowledgeable support. 
+              Trust us to be your partner in success, always ready to help you succeed.
+            </p>
+          </div>
+        </div>
+    
+        <div class="row text-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img src="/assets/yogesh.jpeg"
+                    class="rounded-circle shadow-1-strong" width="100" height="100" />
+                </div>
+                <h5 class="font-weight-bold">Yogesh</h5>
+                <h6 class="font-weight-bold my-3">A Retail Seller </h6>
+                <ul class="list-unstyled d-flex justify-content-center">
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star-half-alt fa-sm text-info"></i>
+                  </li>
+                </ul>
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>This inventory management system has transformed our business! It's intuitive, efficient, 
+                  and has saved us countless hours of manual work. Highly recommended
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img src="/assets/aravindh.jpeg"
+                    class="rounded-circle shadow-1-strong" width="100" height="100" />
+                </div>
+                <h5 class="font-weight-bold">Aravindasamy</h5>
+                <h6 class="font-weight-bold my-3">SmartGo, Electric Store </h6>
+                <ul class="list-unstyled d-flex justify-content-center">
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                </ul>
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>I can't imagine running our warehouse without this system. 
+                  It's reliable, easy to use, and has drastically reduced our inventory errors. 
+                  A game-changer for us!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-0">
+            <div class="card">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img src="/assets/dharma.jpeg"
+                    class="rounded-circle shadow-1-strong" width="100" height="100" />
+                </div>
+                <h5 class="font-weight-bold">Dharma</h5>
+                <h6 class="font-weight-bold my-3">AML,Electronics Store</h6>
+                <ul class="list-unstyled d-flex justify-content-center">
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-info"></i>
+                  </li>
+                  <li>
+                    <i class="far fa-star fa-sm text-info"></i>
+                  </li>
+                </ul>
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i>The customer support team is amazing! They are always responsive, 
+                  knowledgeable, and go above and beyond to help us resolve any issues. 
+                  Truly top-notch service!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>
+
+
+<section>
+ 
+  <div class="bg-body-tertiary text-center text-lg-start ms-4">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Communicate</h5>
+    
+            <ul class="list-unstyled mb-4">
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Support Team</a>
+              </li>
+              <li class="my-4">
+                <a class="text-decoration-none fw-bold ">Demo</a>
+              </li>
+              <li class="my-4">
+                <a class="text-decoration-none fw-bold ">Director</a>
+              </li>
+              <li class="my-4">
+                <a class="text-decoration-none fw-bold ">Partnership</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+    <hr>
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Solutions & Features</h5>
+    
+            <ul class="list-unstyled">
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Production management</a>
+              </li>
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">inventory Management</a>
+              </li >
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Online Orders</a>
+              </li>
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Barcodes</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Legal & Tech Data</h5>
+    
+            <ul class="list-unstyled mb-4">
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Privacy Policy</a>
+              </li>
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Terms of Service</a>
+              </li>
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Security</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Explore</h5>
+    
+            <ul class="list-unstyled">
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Help Center</a>
+              </li>
+              <li class="my-4">
+                <a  class="text-decoration-none fw-bold ">Product Updates</a>
+              </li>
+              <li class="my-4">
+                <a class="text-decoration-none fw-bold ">About Us</a>
+              </li>
+              <li class="my-4">
+                <i class="bi bi-whatsapp"></i>
+                <a class="text-decoration-none fw-bold ">Whatsapp</a>
+              </li>
+              <li class="my-4">
+                  <i class="bi bi-facebook"></i>
+                  <a  class="text-decoration-none fw-bold ">Facebook</a>
+                </li>
+                <li class="my-4">
+                  <i class="bi bi-linkedin"></i>
+                  <a  class="text-decoration-none fw-bold ">Linkedin</a>
+                </li>
+                <li class="my-4">
+                  <i class="bi bi-youtube"></i>
+                  <a class="text-decoration-none fw-bold ">Youtube</a>
+                </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+  
+  </div>
+</section></div>

@@ -1,0 +1,67 @@
+.container {
+    margin-top: 50px;
+}
+
+.custom-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form label {
+    font-weight: bold;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-form button[type="submit"] {
+    padding: 10px 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-success {
+    color: green;
+}
+
+/* Add any additional custom styling as needed */
+.detail-button {
+    display: inline-block;
+    padding: 4px 8px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+    background-color: #28a745; /* Red color, you can change this to fit your design */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+
+    .detail-button:hover {
+        color: #fff; background-color: #218838; /* Darker red color on hover */
+    }
+    .password-toggle {
+        position: relative;
+    }
+    
+    .password-toggle i {
+        position: absolute;
+        top: 75%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }

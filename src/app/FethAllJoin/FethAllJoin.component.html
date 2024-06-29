@@ -1,0 +1,62 @@
+<!-- fetch-product-with-supplier.component.html -->
+
+<div>
+  <h1 class="combine-colour">Product With Supplier</h1>
+
+  <br>
+</div>
+
+<div class="table-responsive">
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Product Id</th>
+              <th>Product Name</th>
+              <th>Product Quantity</th>
+              <th>Product Cost</th>
+              <th>Product Category</th>
+              <th>Supplier Id</th>
+              <th>Supplier User Name</th>
+              <th>Contact Number</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of joinedData">
+              <td>{{ item.productId }}</td>
+              <td>{{ item.productName }}</td>
+              <td>{{ item.productQuantity }}</td>
+              <td>{{ item.productCost| currency:'INR':'symbol':'1.0-2' }}</td>
+              <td>{{ item.productCategory }}</td>
+              <td>{{ item.supplierId }}</td>
+              <td>{{item.supplier?.supplierUserName}}</td>
+              <td>{{ item.supplier?.contactNumber }}</td>
+              
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+<!-- 
+this.products.forEach(product => {
+    if (product.supplier?.$ref) {
+      const supplierId = product.supplier.$ref;
+      const supplier = this.suppliers.find(s => s.supplierId === supplierId);
+      if (!supplier) {
+        // If supplier information not already fetched, fetch it
+        this.fetchSupplier(supplierId);
+      }
+    }
+  });
+
+  fetchSupplier(supplierId: string): void {
+    // Assuming productService.fetchSupplier() fetches supplier information by ID
+    this.productService.fetchSupplier(supplierId).subscribe(
+      response => {
+        console.log("Supplier fetched successfully", response);
+        this.suppliers.push(response);
+      },
+      error => {
+        console.log("Failed to fetch supplier", error);
+      }
+    );
+  } -->

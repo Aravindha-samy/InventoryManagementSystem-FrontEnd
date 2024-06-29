@@ -1,0 +1,58 @@
+<main>
+  <div class="container">
+  <h1 class="combine-colour">Delete</h1>
+
+  <div>
+      <h4>Product</h4>
+      <hr />
+      <div id="response">
+          <h3>{{responseMessage}}</h3>
+      </div>
+      <br>
+      <div style="display: inline-flex;">
+       <form (ngSubmit)="onSubmit(productIdForm)" #productIdForm="ngForm" class="d-flex justify-content-center align-items-center">
+            <div class="form-group row">
+                <div class="col-sm-8">
+                    <input type="number" id="ProductId" name="id" class="form-control" placeholder="Enter Product ID" ngModel required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-info">Details</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Form for confirming deletion -->
+        <form  *ngIf="productDetails" (ngSubmit)="onDelete(productDetails.productId)" #productId="ngForm" class="d-flex justify-content-center align-items-center">
+            <div class="form-group row">
+                <input type="hidden" id="ConfirmProductId" [(ngModel)]="productDetails.productId" name="productId" />
+                <div class="col-sm-4 offset-sm-8"> <!-- Offset to align with the right -->
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+      </div>
+
+    <dl *ngIf="productDetails" class="row">
+      <dt class="col-sm-2">Product ID</dt>
+      <dd class="col-sm-10">{{ productDetails.productId }}</dd>
+      <dt class="col-sm-2">Product Name</dt>
+      <dd class="col-sm-10">{{ productDetails.productName }}</dd>
+      <dt class="col-sm-2">Product Description</dt>
+      <dd class="col-sm-10">{{ productDetails.productDescribtion }}</dd>
+      <dt class="col-sm-2">Product Quantity</dt>
+      <dd class="col-sm-10">{{ productDetails.productQuantity }}</dd>
+      <dt class="col-sm-2">Product Cost</dt>
+      <dd class="col-sm-10">{{ productDetails.productCost| currency:'INR':'symbol':'1.0-2' }}</dd>
+      <dt class="col-sm-2">Product Barcode</dt>
+      <dd class="col-sm-10">{{ productDetails.productBarCode }}</dd>
+      <dt class="col-sm-2">Product Category</dt>
+      <dd class="col-sm-10">{{ productDetails.productCategory }}</dd>
+      <dt class="col-sm-2">Supplier ID</dt>
+      <dd class="col-sm-10">{{ productDetails.supplierId }}</dd>
+    </dl>
+    <br />
+      <div>
+      </div>
+  </div>
+</div>
+</main>

@@ -1,0 +1,55 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+    .table th,
+    .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+  
+    .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-align: left;
+    }
+
+      
+      #productName,#quantitySold{
+        border: 1px solid #dde7eb;
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      
+      .input-container {
+        position: relative;
+        margin-top: 20px; 
+        /* Adjust as needed */
+      }
+      
+      .right-text {
+        
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      
+      .right-text:focus {
+        outline: none;
+        
+        border-color: #007bff; /* Change border color on focus */
+      }
+      
+      /* Style the search icon */
+      .right-text::placeholder {
+        color: #aaa; /* Placeholder text color */
+      }
+      
+      .right-text:focus::placeholder {
+        
+        color: transparent; /* Hide placeholder text on focus */
+      }
+      
